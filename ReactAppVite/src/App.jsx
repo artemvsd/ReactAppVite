@@ -4,7 +4,7 @@ function App() {
   return (
     <div>
       <h1>Artem</h1>
-      <h2>Alaria</h2>
+      <h2>Doi</h2>
     </div>
   );
 }
