@@ -3,7 +3,7 @@ import React from 'react';
 function App() {
   return (
     <div>
-      <h1>Artem</h1>
+      <h1 className="bg-[#f6c4aa]">Artem</h1>
       <h2>Doi</h2>
     </div>
   );
