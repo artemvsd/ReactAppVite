@@ -1,12 +1,8 @@
 import React from 'react';
+import Ex from './Ex1.jsx';
 
-function App() {
-  return (
-    <div>
-      <h1 className="bg-[#f6c4aa]">Artem</h1>
-      <h2>Doi</h2>
-    </div>
-  );
-}
+const App = () => {
+  return Ex();
+};
 
 export default App;
