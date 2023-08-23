@@ -19,21 +19,33 @@ let Pessoas = [
       { nome: 'Smartphone', preco: 'R$ 1500' },
       { nome: 'Guitarra', preco: 'R$ 3500' },
     ],
-    ativa: false,
+    ativa: true,
   },
 ];
 
+var Lista = [];
 const Ex = () => {
-  var i = 0;
-  function contador() {
-    i++;
-  }
-  return (
-    <div>
-      <button onClick={contador()}>Trocar</button>
-      <p> {Pessoas[i].cliente} </p>
-    </div>
-  );
+  Pessoas.forEach((pessoa, index) => {
+    if (pessoa.ativa) {
+      Lista.push(
+        <div key={index}>
+          <h2>Cliente: {pessoa.cliente}</h2>
+          <h2>Idade: {pessoa.idade}</h2>
+          <h2>
+            Compra:
+            {pessoa.compras.map((item, index) => (
+              <tr data-index={index}>
+                <td>{item.nome}</td>
+                <td>{item.preco}</td>
+              </tr>
+            ))}
+          </h2>
+          <hr />
+        </div>,
+      );
+    }
+  });
+  return <div>{Lista}</div>;
 };
 
 export default Ex;
